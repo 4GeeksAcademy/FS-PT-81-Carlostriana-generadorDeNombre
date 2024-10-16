@@ -6,13 +6,18 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  let pronoun = ["the", "our"];
-  let adj = ["great", "big"];
-  let noun = ["jogger", "racoon"];
-  let action = ["ran away", "jumped off the cliff"];
+  let pronoun = ["The", "Our", "Your"];
+  let adj = ["great", "big", "beautiful", "ugly", "small"];
+  let noun = ["jogger", "racoon", "dog", "bird"];
+  let domains = [".com", ".net", ".us", ".io"];
 
-  const getRandom = arr => arr[Math.floor(Math.random() * arr.length)];
-  const generator = `${getRandom(pronoun)} ${getRandom(adj)} ${getRandom(noun)} ${getRandom(action)}`;
-
-  console.log(generator);
+  for (let p = 0; p < pronoun.length; p++) {
+    for (let a = 0; a < adj.length; a++) {
+      for (let n = 0; n < noun.length; n++) {
+        for (let d = 0; d < domains.length; d++) {
+          console.log(pronoun[p] + adj[a] + noun[n] + domains[d]);
+        }
+      }
+    }
+  }
 };
